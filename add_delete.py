@@ -2,10 +2,17 @@
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #   author Yalushkin Alexey
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-import input_output as data_in
+from input_output import phone_numbers
+
 
 def add_note():
-    pass
+    surname = input('введите фамилию ')
+    lst = [input('введите имя :'), input('введите номер телефона :'), input('описание :')]
+    phone_numbers[surname] = lst
+    print(f'{surname} {' '.join(phone_numbers[surname])}')
+    return phone_numbers
 
-def delete_note():
-    pass
+def delete_note(phone_numbers):
+    surname = input('введите имя для удаления ')
+    phone_numbers.pop(surname)
+    return phone_numbers
