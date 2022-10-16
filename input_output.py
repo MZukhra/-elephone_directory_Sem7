@@ -1,27 +1,23 @@
-#Добавление удаление построчно
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-#   author Yalushkin Alexey
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Alexandr Ulitin
+# Input_Outpunt
 
+# Ввод имени
+def input_name(): 
+    name = input("Введите ваше имя: ") 
+    remfname = name[1:] 
+    firstchar = name[0] 
+    return firstchar.upper() + remfname 
+ 
+# Ввод Фамилии 
+def input_fameli(): 
+    surname = input("Введите вашу фамилию: ") 
+    remlname = surname[1:] 
+    firstchar = surname[0] 
+    return firstchar.upper() + remlname
 
-#ToDo  расписать ф-ии чтения и записи файла, и вывода в терминал всего справочника
-
-
-def get_name(phone_numbers, surname):
-    if surname in phone_numbers:
-        return phone_numbers[surname]
-    else:
-        return print(f'{surname} not in phone numbers')
-
-def input_surname():
-    surname = str(input('введите фамилию - '))
-    return surname
-
-def write_file():
-    pass
-
-def read_file():
-    pass
-
-def view_all():
-    pass
+# Генерация ключа
+def key_gen():
+    format = string.letters + string.digits
+    key = ''.join(secrets.choice(format) for i in range(10))
+    return key
+key = key_gen()
