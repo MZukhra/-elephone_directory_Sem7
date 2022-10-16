@@ -16,11 +16,3 @@ def input_fameli():
     remlname = surname[1:] 
     firstchar = surname[0] 
     return firstchar.upper() + remlname
-
-# # Генерация ключа
-# def key_gen():
-#     format = string.letters + string.digits
-#     key = ''.join(secrets.choice(format) for i in range(10))
-#     return key
-# key = key_gen()
-

@@ -2,13 +2,11 @@
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #   author Yalushkin Alexey
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-from input_output import phone_numbers
+from input_output import phone_numbers<<<<<<< HW_Sem7_Z
 import logger
 
-
-
 def add_note():
-    surname = input('введите фамилию ')
+    surname = input('введите фамилию ')<<<<<<< HW_Sem7_Z
     if surname in phone_numbers.keys():
         phone_numbers.pop(surname)
     lst = [input('введите имя :'), input('введите номер телефона :'), input('описание :')]

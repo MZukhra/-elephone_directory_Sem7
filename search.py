@@ -1,3 +1,4 @@
+
 # Добавление поиска
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #   author Victoria Burakhina
@@ -14,10 +15,8 @@ def search():
     if phone_numbers.keys().__contains__(surname):
         print(f'{surname} {" ".join(phone_numbers[surname])}')
     else:
-
         print('Данных нет в списке')
 
         print('Выход в общее меню')
 
         User_Interface.menu()
-

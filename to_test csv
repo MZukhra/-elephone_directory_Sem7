@@ -1,0 +1,6 @@
+def read_csv (phone_notes1.csv)
+    with open(phone_notes1.csv, newline='') as file
+    reader = csv.DictReader(file)
+    for row in reader
+        print(row[surname], row[name], row[phone_number], row[comment])
+    
