@@ -1,12 +1,20 @@
-#
-# Татьяна Колосова
-# добавлен код log
 
-import logging
+# Menu
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#   author Zukhra
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    filename='phonebook.log',
-    format='[%(asctime)s] [%(levelname)s] [%(module)s] [%(funcName)s: %(lineno)d] => %(message)s',
-    datefmt='%d.%m.%Y %H:%M:%S ',
-)
+from datetime import datetime as dt
+from time import time
+
+def number_logger(text):
+    time = dt.now().strftime('%H:%M')
+    with open('log.txt', 'a', encoding="utf-8") as file:
+        file.write('{};phonebook;{}\n'
+                   .format(time, text))
+
+
+# if __name__ == "__logger__":
+phone_numbers = {'петров': ['вася', '02', 'милиция'],
+                 'иванов': ['Михаил', '03', 'скорая']}
+number_logger(phone_numbers)

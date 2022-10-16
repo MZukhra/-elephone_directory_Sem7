@@ -1,24 +1,22 @@
 
-# Виктория Бурахина
-# добавлен модуль search
-
+# Добавление поиска
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#   author Victoria Burakhina
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
 from input_output import phone_numbers
-import user_interface
+import User_Interface
 
-def search(surname, phone_numbers):
 
-     if phone_numbers.keys().__contains__(surname):
-         print(f'{surname} {" ".join(phone_numbers[surname])}')
-     else:
+def search():
 
+    surname = input('введите фамилию ')
+    if phone_numbers.keys().__contains__(surname):
+        print(f'{surname} {" ".join(phone_numbers[surname])}')
+    else:
         print('Данных нет в списке')
 
         print('Выход в общее меню')
-    user_interface.menu()
 
-
-
-
-
+        User_Interface.menu()
