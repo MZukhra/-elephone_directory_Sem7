@@ -1,0 +1,7 @@
+def write_file_csv(phone_notes1.csv):
+    with open(file_csv, 'w', newline ='') as file
+    fieldnames = ['surname', 'name', 'phone_number', 'comment']
+    writer = csv.DictWriter(file, fieldnames = fieldnames)
+    writer.writeheader()
+    writer.writerow({'surname': 'name', 'phone_number', 'comment'})
+    
